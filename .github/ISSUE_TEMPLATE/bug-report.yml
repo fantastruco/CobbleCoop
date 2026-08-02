@@ -1,0 +1,143 @@
+name: Bug report
+description: Report a reproducible problem with Cobble Co-op
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem. Please fill in the important fields and attach the log from the session where it happened.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched the existing issues for the same problem.
+          required: true
+        - label: I tested with the latest available Cobble Co-op version.
+          required: true
+        - label: This problem happens while Cobble Co-op is installed or used.
+          required: true
+
+  - type: input
+    id: cobblecoop-version
+    attributes:
+      label: Cobble Co-op version
+      placeholder: Example: 1.4.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      options:
+        - Dedicated server
+        - Singleplayer or LAN world
+        - Client connected to another server
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      multiple: true
+      options:
+        - Menu or visual display
+        - Invitation or session
+        - Team selection
+        - Handicap validation
+        - Battle start or cleanup
+        - Trainer randomizer
+        - Trainer AI
+        - Rewards or progress
+        - Mod compatibility
+        - Crash
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: versions
+    attributes:
+      label: Relevant mod versions
+      description: Fill in every version you can find. Do not write "latest".
+      value: |
+        - Minecraft: 1.21.1
+        - Fabric Loader:
+        - Fabric API:
+        - Cobblemon:
+        - Radical Cobblemon Trainers:
+        - Radical Cobblemon Trainers API:
+        - Forge Config API Port:
+        - Mod Menu, if installed:
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Explain the problem and what both players were doing.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Opened the co-op menu on...
+        2. Selected...
+        3. Invited...
+        4. The problem appeared when...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should have happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: battle-settings
+    attributes:
+      label: Battle settings
+      description: List the battle mode, team size, AI difficulty, randomizers and active handicaps when relevant.
+      placeholder: |
+        - Mode:
+        - Team size:
+        - AI difficulty:
+        - Randomizers:
+        - Handicaps:
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs and crash reports
+      description: Drag `latest.log` and any crash report into this field. Remove private server addresses, tokens or account information first.
+    validations:
+      required: true
+
+  - type: textarea
+    id: media
+    attributes:
+      label: Screenshots or video
+      description: Drag files here for menu, rendering or positioning problems.
+
+  - type: textarea
+    id: other-mods
+    attributes:
+      label: Other installed mods
+      description: Attach a mod list when the problem could be caused by compatibility.
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional information
+      description: Add anything else that could help reproduce the problem.
