@@ -73,7 +73,6 @@ body:
         - Radical Cobblemon Trainers:
         - Radical Cobblemon Trainers API:
         - Forge Config API Port:
-        - Mod Menu, if installed:
     validations:
       required: true
 
