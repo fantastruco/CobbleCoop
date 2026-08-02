@@ -25,7 +25,7 @@ body:
     id: cobblecoop-version
     attributes:
       label: Cobble Co-op version
-      placeholder: Example: 1.4.0
+      placeholder: "Example: 1.4.0"
     validations:
       required: true
 
